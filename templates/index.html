@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link type="text/css" href="/static/styles.css" rel="stylesheet"/>
+
+</head>
+<body>
+
+{% block content -%}
+
+    <div class="container">
+        <div class="box">
+
+            <div><img width="327px" height="480px" src="/static/img/_back.jpg"></div>
+
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="box">
+            <button type="button" onclick="document.location='/divination'">три карты</button>
+            <button type="button" onclick="document.location='/atu'">старшие арканы</button>
+
+        </div>
+    </div>
+
+
+{% endblock -%}
+
+
+</body>
+</html>
