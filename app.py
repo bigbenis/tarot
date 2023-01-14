@@ -64,7 +64,7 @@ MAJOR_ARCANAS = (
          'Universe'
 )
 
-MINOR_ARCANAS = [
+MINOR_ARCANAS = (
     'AceOfDisks',
     'TwoOfDisks',
     'ThreeOfDisks',
