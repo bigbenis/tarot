@@ -1,2 +1,2 @@
-web: gunicorn spurdo-tarot:app
+web: gunicorn app:app
 
