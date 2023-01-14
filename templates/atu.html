@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link type="text/css" href="/static/styles.css" rel="stylesheet" />
+
+</head>
+<body>
+
+{% block content -%}
+
+<div class="container">
+  <div class="box">
+    <div><img width="327px" height="480px" src="/static/img/{{ card1 }}.jpg"></div>
+    <div><img width="327px" height="480px" src="/static/img/{{ card2 }}.jpg"></div>
+    <div><img width="327px" height="480px" src="/static/img/{{ card3 }}.jpg"></div>
+  </div>
+</div>
+
+<div class="buttonConteiner">
+<button type="button" onclick="document.location='/atu'">ещё</button>
+</div>
+
+{% endblock -%}
+
+
+
+
+
+
+</body>
+</html>

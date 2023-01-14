@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link type="text/css" href="/static/styles.css" rel="stylesheet" />
+
+</head>
+<body>
+
+{% block content -%}
+
+<table class="container">
+
+<tr class="cardView">
+    <td>
+        <div><img width="327px" height="480px" src="{{ card1}}">
+        </div>
+    </td>
+    <td>
+        <div><img width="327px" height="480px" src="/static/img/{{ card2 }}.jpg">
+        </div>
+    </td>
+    <td>
+        <div><img width="327px" height="480px" src="/static/img/{{ card3 }}.jpg"></div>
+    </td>
+</tr>
+
+<tr class="cardInf">
+    <td>
+        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</div>
+    </td>
+    <td>
+        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</div>
+    </td>
+    <td>
+        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</div>
+    </td>
+</tr>
+
+<tr class="forButton">
+    <td>
+        <div></div>
+    </td>
+    <td>
+        <div><button type="button" onclick="document.location='/spurdo'">ещё</button></div>
+    </td>
+    <td>
+        <div></div>
+    </td>
+</tr>
+
+</table>
+
+{% endblock -%}
+
+ </body>
+</html>
