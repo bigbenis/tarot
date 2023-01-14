@@ -15,6 +15,7 @@ app = Flask(__name__)
 app.config.from_object(__name__)
 app.config.update(dict(DATABASE=os.path.join(app.root_path, "tarotcards.db")))
 
+
 def connect_db():
     conn = sqlite3.connect((app.config['DATABASE']))
     conn.row_factory = sqlite3.Row
@@ -39,32 +40,33 @@ def close_db(error):
     if hasattr(g, 'link_db'):
         g.link_db.close()
 
-MAJOR_ARCANAS = (
-        'Fool',
-         'Magus',
-         'Priestess',
-         'Empress',
-         'Emperor',
-         'Hierophant',
-         'Lovers',
-         'Chariot',
-         'Adjustment',
-         'TheHermit',
-         'Fortune',
-         'Lust',
-         'HangedMan',
-         'Death',
-         'Art',
-         'Devil',
-         'Tower',
-         'Star',
-         'Moon',
-         'Sun',
-         'Aeon',
-         'Universe'
+
+MAJOR_ARCANA = (
+    'Fool',
+    'Magus',
+    'Priestess',
+    'Empress',
+    'Emperor',
+    'Hierophant',
+    'Lovers',
+    'Chariot',
+    'Adjustment',
+    'TheHermit',
+    'Fortune',
+    'Lust',
+    'HangedMan',
+    'Death',
+    'Art',
+    'Devil',
+    'Tower',
+    'Star',
+    'Moon',
+    'Sun',
+    'Aeon',
+    'Universe'
 )
 
-MINOR_ARCANAS = (
+MINOR_ARCANA = (
     'AceOfDisks',
     'TwoOfDisks',
     'ThreeOfDisks',
@@ -123,7 +125,7 @@ MINOR_ARCANAS = (
     'PrincessOfSwords'
 )
 
-cards = MINOR_ARCANAS + MAJOR_ARCANAS
+cards = MINOR_ARCANA + MAJOR_ARCANA
 
 @app.route('/')
 def index():
@@ -144,10 +146,11 @@ def atu():
     return render_template('atu.html', title='Старшие Арканы', card1=divination[0], card2=divination[1],
                            card3=divination[2])
 
+
 @app.route('/lsd')
 def lsd():
     divinaton = random.sample(cards, 3)
-    return render_template('lsd.html', title='lsd',card1=divinaton[0], card2=divinaton[1], card3=divinaton[2])
+    return render_template('lsd.html', title='lsd', card1=divinaton[0], card2=divinaton[1], card3=divinaton[2])
 
 
 @app.route('/test')
