@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link type="text/css" href="/static/styles.css" rel="stylesheet" />
+
+</head>
+<body>
+
+{% block content -%}
+
+<div class="container">
+  <div class="box">
+      <div><video width="327px" height="480px" src="/static/video/{{ card1 }}.mp4"></video></div>
+      <div><video width="327px" height="480px" src="/static/video/{{ card2 }}.mp4"></video></div>
+      <div><video width="327px" height="480px" src="/static/video/{{ card3 }}.mp4"></video></div>
+  </div>
+</div>
+
+<div class="buttonConteiner">
+<button type="button" onclick="document.location='/lsd'">ещё</button>
+</div>
+
+{% endblock -%}
+
+
+
+
+
+
+</body>
+</html>
