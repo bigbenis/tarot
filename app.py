@@ -51,7 +51,7 @@ MAJOR_ARCANA = (
     'Lovers',
     'Chariot',
     'Adjustment',
-    'TheHermit',
+    'Hermit',
     'Fortune',
     'Lust',
     'HangedMan',
