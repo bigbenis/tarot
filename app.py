@@ -125,7 +125,7 @@ MINOR_ARCANA = (
     'PrincessOfSwords'
 )
 
-cards = MINOR_ARCANA + MAJOR_ARCANA
+CARDS = MINOR_ARCANA + MAJOR_ARCANA
 
 @app.route('/')
 def index():
@@ -134,7 +134,7 @@ def index():
 
 @app.route('/divination')
 def threecards():
-    divination = random.sample(cards, 3)
+    divination = random.sample(CARDS, 3)
 
     return render_template('divination.html', title='Три карты', card1=divination[0], card2=divination[1],
                            card3=divination[2])
@@ -142,14 +142,14 @@ def threecards():
 
 @app.route('/atu')
 def atu():
-    divination = random.sample(cards[0:21], 3)
+    divination = random.sample(MAJOR_ARCANA, 3)
     return render_template('atu.html', title='Старшие Арканы', card1=divination[0], card2=divination[1],
                            card3=divination[2])
 
 
 @app.route('/lsd')
 def lsd():
-    divinaton = random.sample(cards, 3)
+    divinaton = random.sample(CARDS, 3)
     return render_template('lsd.html', title='lsd', card1=divinaton[0], card2=divinaton[1], card3=divinaton[2])
 
 
